@@ -1,0 +1,38 @@
+fileFormatVersion: 2
+guid: e5563af78ada4854185779f892573e29
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - mountains: {fileID: 919132149155446097, guid: 22a95f614f918444cbdee9ab1a0e9e15, type: 3}
+  - centerSign: {instanceID: 0}
+  - bluePhysicalTarget: {instanceID: 0}
+  - greenPhysicalTarget: {instanceID: 0}
+  - blueVirtualTarget: {instanceID: 0}
+  - greenVirtualTarget: {instanceID: 0}
+  - dottedVirtualTarget: {instanceID: 0}
+  - stripesVirtualTarget: {instanceID: 0}
+  - decoys: {instanceID: 0}
+  - rotationCue: {instanceID: 0}
+  - turnLeftSound: {instanceID: 0}
+  - turnRightSound: {instanceID: 0}
+  - controller: {instanceID: 0}
+  - laser: {instanceID: 0}
+  - reticleGameObjects: {instanceID: 0}
+  - blueReticle: {instanceID: 0}
+  - greenReticle: {instanceID: 0}
+  - dottedReticle: {instanceID: 0}
+  - stripesReticle: {instanceID: 0}
+  - ans: {instanceID: 0}
+  - groundTruth: {instanceID: 0}
+  - StartTrialPanel: {instanceID: 0}
+  - ObjectUserConfirmedNewPosition: {instanceID: 0}
+  - textOnStartPanel: {instanceID: 0}
+  - instructions: {instanceID: 0}
+  - passthroughLayer: {instanceID: 0}
+  - lightingControl: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
