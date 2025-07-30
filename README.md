@@ -20,7 +20,7 @@ This project includes a Unity-based VR experiment developed for the Meta Quest 3
 
 ---
 
-## 🥽 Experimental Setup
+## Experimental Setup
 
 - **Platform**: Unity 2022.3 (URP)
 - **Hardware**: Meta Quest 3 (standalone mode, no PC required)
@@ -31,7 +31,7 @@ This project includes a Unity-based VR experiment developed for the Meta Quest 3
 
 ---
 
-## 🎮 Snap Rotation (In-VR Controls)
+## Snap Rotation (In-VR Controls)
 
 - **Right Joystick**:
   - Push **right** → rotate scene 20° to the **right**
