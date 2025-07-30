@@ -70,7 +70,7 @@ A Unity C# script (`Alignment.cs`) is provided to align the virtual scene to the
 
 ## Python Data Analysis
 
-Once the experiment is completed, a Python script can be used to analyze the data collected from participants.
+Once the experiment is completed, a Python script (´logAnalysis.py´) can be used to analyze the data collected from participants.
 
 ### Requirements
 
