@@ -20,16 +20,13 @@ warnings.simplefilter('ignore', np.RankWarning)
 
 # === Configuration ===
 # Replace these with your actual CSV file paths
-snap_files = [#"C://Users//PC//Desktop//StudieDaten//filesP0_snap_NilsZubrot.csv", 
-              "C://Users//PC//Desktop//StudieDaten//filesP1_snap_KarimDauer.csv", 
-              "C://Users//PC//Desktop//StudieDaten//filesP2_snap_ClemensKnartzt.csv",
+snap_files = [
               "C://Users//PC//Desktop//StudieDaten//filesP0_erf_snap.csv"
               ]
-full_body_files = ["C://Users//PC//Desktop//StudieDaten//filesP3_rot_LukasSeebass.csv",
-                   "C://Users//PC//Desktop//StudieDaten//filesP4_rot_JoshuaJung.csv",
-                   "C://Users//PC//Desktop//StudieDaten//filesP5_rot_AlisaBiernat.csv"
+full_body_files = ["C://Users//PC//Desktop//StudieDaten//filesP3_rot_LukasSeebass.csv"
                    ]
 
+#change contents or the way its read
 data = [
     {
         "Participant": "P0",
@@ -122,7 +119,7 @@ def process_files(file_list, name, onlyfirst=False):
     # Keep only the first of each (assuming each pair has a unique Participant + trialID)
     if (onlyfirst) : df_filtered = df_filtered.groupby(['Participant', 'trialID'], group_keys=False).apply(is_first_of_pair).reset_index(drop=True)    
 
-
+    #DEBUG
     #print(f"\n--- Data after filtering for first non-decoy target for {name} (all selected rows) ---")
     #print(df_filtered[['Participant', 'trialID', 'AnsName', 'ResponsePos_X', 'ResponsePos_Z', 'AnsPos_X', 'AnsPos_Z']].to_string())
 
@@ -230,7 +227,7 @@ def plot_environment(df, layout, title, xlim=None, ylim=None,
         resp_x, resp_z = row['ResponsePos_X'], row['ResponsePos_Z']
         ans_x, ans_z = row['AnsPos_X'], row['AnsPos_Z']
 
-        # 🔄 NEW: Find target nearest to the correct answer, not response
+        # Find target nearest to the correct answer, not response
         nearest_target = find_nearest_target_to_answer(ans_x, ans_z, target_coords)
 
         # Plot response (always red cross)
@@ -459,7 +456,7 @@ print(result_rt.summary())
 
 
 
-# STEP 1: Calculate Presence Score
+# Calculate Presence Score
 # Assuming 'questionnaire_df' is already loaded
 questionnaire_numeric = questionnaire_df.select_dtypes(include=[np.number])
 questionnaire_df['Presence_Score'] = questionnaire_numeric.mean(axis=1)
@@ -467,7 +464,7 @@ questionnaire_df['Presence_Score'] = questionnaire_numeric.mean(axis=1)
 # Debug: View columns to verify presence of 'Participant'
 print(questionnaire_df.columns.tolist())
 
-# STEP 2: Merge with Performance Summary
+# Merge with Performance Summary
 merged_data = pd.merge(
     participant_stats,
     questionnaire_df[['Participant', 'Presence_Score']],
@@ -576,7 +573,6 @@ lin_reg = LinearRegression().fit(X, y)
 y_pred_linear = lin_reg.predict(X)
 
 # Quadratic model
-
 poly = PolynomialFeatures(degree=2)
 X_poly = poly.fit_transform(X)
 quad_reg = LinearRegression().fit(X_poly, y)
