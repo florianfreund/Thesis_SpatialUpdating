@@ -2,6 +2,7 @@
 
 
 Abstract:
+
 Spatial updating is the cognitive process that allows individuals keep track of object locations in a space during self-motion or orientation change [Riecke2007Spatial].
 Virtual Reality (VR), as a dual-environment paradigm, enables overlapping physical and virtual spaces [liftonDualRealityMerging2010, TsengEtAl].
 In a previous study, the gap was investigated how spatial updating performance in dual environments is related to the sense of presence in VR by manipulating self-rotation [TsengEtAl]. 
