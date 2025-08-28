@@ -77,6 +77,24 @@ Once the experiment is completed, a Python script (`logAnalysis.py`) can be used
 - **Python**: Version 3.12
 - **Libraries Used**:
   pandas, matplotlib.pyplot, numpy, sklearn.preprocessing, sklearn.linear_model, sklearn.metrics,
-  scipy.stats, pingouin, seaborn, math, statsmodels.api, statsmodels.formula.api, 
+  scipy.stats, pingouin, seaborn, math, statsmodels.api, statsmodels.formula.api
+
+
+## Optimization Suggestions
+
+- **CSV Output Issue**  
+  One row of the output CSV file contained part of the CSV header.  
+  Check write operations to prevent errors.
+
+- **Performance Drift**  
+  Reduced vigilance was observed during highly monotonous, repetitive work of participants.  
+  Verify by comparing the average performance of early trials with later ones.
+
+- **Virtual Environment Cues**  
+  Modify the virtual environment by adding more visual cues.  
+  Investigate the effects.
+
+> For further details, see the thesis discussion.
+
 
 
